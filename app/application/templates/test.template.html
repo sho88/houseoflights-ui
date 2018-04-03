@@ -1,0 +1,24 @@
+<div>HOL UI v0.1 - {{ name }}</div>
+<form>
+  <div>
+    <label>Email: <br />
+      <input autocomplete="off" name="email" type="email" />
+    </label>
+  </div>
+  {{#if email}}
+  <div>Your email is {{ email }}</div>
+  {{/if}}
+
+  <div>
+    <label>Password: <br />
+      <input name="password" type="password" />
+    </label>
+  </div>
+  {{#if password}}
+  <div>Your password is {{ password }}</div>
+  {{/if}}
+
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
