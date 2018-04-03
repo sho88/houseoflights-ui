@@ -7,6 +7,5 @@ const TestModel = require('./models/test.model');
 // ...then, create the view ----------------------------------------------------
 const TestView = require('./views/test.view')
 
-// -----------------------------------------------------------------------------
-
+// ...initialize the app -------------------------------------------------------
 TestView.initialize();

@@ -41,5 +41,8 @@ module.exports = HOLUI.MakeView({
 
     this.model.setAttribute('email', email);
     this.model.setAttribute('password', password);
+
+    // send the data to the console...(for viewing ONLY)
+    console.log( this.model.getAttributes() );
   }
 });

@@ -2,21 +2,15 @@
 <form>
   <div>
     <label>Email: <br />
-      <input autocomplete="off" name="email" type="email" />
+      <input autocomplete="off" name="email" type="email" value="{{ email }}" />
     </label>
   </div>
-  {{#if email}}
-  <div>Your email is {{ email }}</div>
-  {{/if}}
 
   <div>
     <label>Password: <br />
       <input name="password" type="password" />
     </label>
   </div>
-  {{#if password}}
-  <div>Your password is {{ password }}</div>
-  {{/if}}
 
   <div>
     <button>Submit</button>
