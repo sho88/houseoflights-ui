@@ -6,19 +6,30 @@ const HOLUI = require('./../core')
 // -----------------------------------------------------------------------------
 
 module.exports = HOLUI.MakeView({
+
+  // the element that we'll be "embedding" this view in ------------------------
   selector: document.querySelector('#app'),
-  template: Handlebars.compile( template ),
+
+  // the data model that this view will be using -------------------------------
   model: HomeModel,
+  
+  // the "visible" template that this view will control ------------------------
+  template: Handlebars.compile( template ),
+
+  // acts like the constructor -------------------------------------------------
   initialize() {
   	this.model.on('model:update', this.render, this);
   	this.render();
   },
+  
+  // register the events for this view (in the template) -----------------------
   events() {
   	return [
 	  	{ selector: 'button', ev: 'click', method: this.onFormSubmission.bind(this) }
 	  ];
 	},
 
+  // ALL events must follow "on" naming convention (prepended) -----------------
   onFormSubmission($ev) {
   	$ev.preventDefault();
   	this.model.setAttribute('username', 'holuser1');
