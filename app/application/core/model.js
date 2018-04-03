@@ -33,7 +33,7 @@ module.exports = {
     return this.data;
   },
   on(eventName, cb, scope) {
-    Events.on(eventName, cb, scope);
+    Events.on(`${eventName}`, cb, scope);
   },
   _events: Events
  };

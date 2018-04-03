@@ -25,13 +25,19 @@ module.exports = HOLUI.MakeView({
   // register the events for this view (in the template) -----------------------
   events() {
   	return [
-	  	{ selector: 'button', ev: 'click', method: this.onFormSubmission.bind(this) }
+	  	{ selector: 'form', ev: 'submit', method: this.onFormSubmission.bind(this) }
 	  ];
 	},
 
   // ALL events must follow "on" naming convention (prepended) -----------------
   onFormSubmission($ev) {
   	$ev.preventDefault();
-  	this.model.setAttribute('username', 'holuser1');
+  	const formElements = $ev.target.elements;
+  	console.log( $ev.target );
+  	this.model.setAttribute('username', formElements.namedItem('username').value);
+  	this.model.setAttribute('name', formElements.namedItem('name').value);
+  	this.model.setAttribute('types', formElements.namedItem('types').value);
+
+  	console.log( this.model.getAttributes() );
   }
 });

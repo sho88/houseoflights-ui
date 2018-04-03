@@ -1,0 +1,31 @@
+/**
+ * Primary: #450F6C;
+ * Secondary: #333;
+ * Supplementary: #FFF;
+ */
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+html {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	border-top: 10px solid #450F6C;
+	font: 12px 'Source Code Pro', sans-serif;
+	margin-bottom: 60px;
+}
+
+footer {
+	background: #333;
+	bottom: 0;
+	color: #FFF;
+	height: 60px;
+	line-height: 60px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+footer a {
+	color: #FFF;
+}

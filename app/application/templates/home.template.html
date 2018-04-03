@@ -1,14 +1,23 @@
 <form>
 	<!-- Need to add some nice css styling to this! -->
-	
+
 	<div>
 		Name: <br />
-		<input hol-model="name" type="text" />
+		<input autocomplete="off" hol-model="name" name="name" type="text" />
 	</div>
 
 	<div>
 		Username: <br />
-		<input hol-model="username" type="text" />
+		<input autocomplete="off" hol-model="username" name="username" type="text" />
+	</div>
+
+	<div>
+		User Type: <br />
+		<select hol-model="types" name="types">
+			{{#each typeOptions}}
+			<option value="{{ value }}">{{label}}</option>
+			{{/each}}
+		</select>
 	</div>
 
 	<button>Click Me</button>
