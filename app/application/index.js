@@ -1,11 +1,8 @@
 'use strict';
 // HouseOfLights UI v0.1 -------------------------------------------------------
 
-// I create my model with the default properties -------------------------------
-const TestModel = require('./models/test.model');
-
-// ...then, create the view ----------------------------------------------------
-const TestView = require('./views/test.view')
+// ...create the view ----------------------------------------------------
+const HomeView = require('./views/home.view');
 
 // ...initialize the app -------------------------------------------------------
-TestView.initialize();
+HomeView.initialize();

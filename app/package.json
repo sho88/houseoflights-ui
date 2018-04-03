@@ -1,6 +1,7 @@
 {
   "scripts": {
     "build": "webpack",
+    "lint": "eslint ./",
     "watch": "webpack -w"
   },
   "dependencies": {
@@ -8,6 +9,7 @@
   },
   "devDependencies": {
     "babel-loader": "^7.1.4",
+    "eslint": "^4.19.1",
     "raw-loader": "^0.5.1",
     "webpack-cli": "^2.0.13"
   }

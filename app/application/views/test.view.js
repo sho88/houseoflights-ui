@@ -1,7 +1,7 @@
 const HOLUI = require('./../core')
   , Handlebars = require('./../lib/handlebars.min')
   , TestModel = require('./../models/test.model')
-  , template = require('./../templates/test.template.html');;
+  , template = require('./../templates/test.template.html');
 
 // -----------------------------------------------------------------------------
 
@@ -23,7 +23,7 @@ module.exports = HOLUI.MakeView({
     this.render();
   },
 
-  // register the events for this view (in the template) ------------------------
+  // register the events for this view (in the template) -----------------------
   events () {
     return [
       // [selector] - the element that the event will be binded to
@@ -33,7 +33,7 @@ module.exports = HOLUI.MakeView({
     ]
   },
 
-  // ALL events must follow "on" naming convention (prepended) ------------------
+  // ALL events must follow "on" naming convention (prepended) -----------------
   onFormSubmission ($ev) {
     $ev.preventDefault();
     const email = $ev.target.elements.namedItem('email').value;
