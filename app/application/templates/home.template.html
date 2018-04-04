@@ -1,24 +1,46 @@
-<form>
-	<!-- Need to add some nice css styling to this! -->
-
-	<div>
-		Name: <br />
-		<input autocomplete="off" hol-model="name" name="name" type="text" />
+<section class="fullscreen">
+	
+	<div class="fullscreen__content">
+		<h3 class="fs-title">HOL:UI</h3>
+		<p class="fs-message">A mini UI toolkit for House of Lights websites</p>
 	</div>
 
-	<div>
-		Username: <br />
-		<input autocomplete="off" hol-model="username" name="username" type="text" />
+</section>
+
+
+<section>
+
+	<div class="grid">
+		<div class="grid__row">
+			<div class="column-one-half hide-on-desktop">
+
+				<form>
+					<!-- Need to add some nice css styling to this! -->
+
+					<div>
+						Name: <br />
+						<input autocomplete="off" hol-model="name" name="name" type="text" />
+					</div>
+
+					<div>
+						Username: <br />
+						<input autocomplete="off" hol-model="username" name="username" type="text" />
+					</div>
+
+					<div>
+						User Type: <br />
+						<select hol-model="type" name="type">
+							{{#each typeOptions}}
+							<option value="{{ value }}">{{label}}</option>
+							{{/each}}
+						</select>
+					</div>
+
+					<button class="hol-btn">Click Me</button>
+				</form>
+	
+			</div>
+		</div>
 	</div>
 
-	<div>
-		User Type: <br />
-		<select hol-model="types" name="types">
-			{{#each typeOptions}}
-			<option value="{{ value }}">{{label}}</option>
-			{{/each}}
-		</select>
-	</div>
-
-	<button>Click Me</button>
-</form>
+</section>

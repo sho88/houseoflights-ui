@@ -3,7 +3,7 @@ const HOLUI = require('./../core');
 module.exports = HOLUI.MakeModel({
   name: 'Sho-Silva',
   username: 'sho88',
-  types: 'Admin',
+  type: 'Admin',
   typeOptions: [
   	{ label: 'Teacher', value: 'Teacher' },
   	{ label: 'Student', value: 'Student' },

@@ -36,7 +36,7 @@ module.exports = HOLUI.MakeView({
   	console.log( $ev.target );
   	this.model.setAttribute('username', formElements.namedItem('username').value);
   	this.model.setAttribute('name', formElements.namedItem('name').value);
-  	this.model.setAttribute('types', formElements.namedItem('types').value);
+  	this.model.setAttribute('type', formElements.namedItem('type').value);
 
   	console.log( this.model.getAttributes() );
   }

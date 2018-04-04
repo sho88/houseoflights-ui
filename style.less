@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|IBM+Plex+Mono');
+
+@primary: #450F6C;
+@secondary: #333333;
+@supplementary: #FFFFFF;
+
+@tablet: 768px;
+@desktop: 992px; 
+
+html {
+	min-height: 100%;
+	position: relative;
+}
+
+/* ----------------------------------------------------------- */
+
+body {
+	border-top: 10px solid @primary;
+	font: 13px  'IBM Plex Mono', monospace;
+	margin-bottom: 60px;
+}
+
+/* ----------------------------------------------------------- */
+
+header {
+	.logo { 
+		height: 100px; 
+		margin: auto; 
+		width: 100px; 
+	}
+	img { 
+		width: 100%; 
+	}
+}
+
+/* ----------------------------------------------------------- */
+
+footer {
+	background: @secondary;
+	bottom: 0;
+	color: @supplementary;
+	height: 60px;
+	line-height: 60px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	
+	a { 
+		color: @supplementary;
+	}
+}
+
+/* ----------------------------------------------------------- */
+
+hr { 
+	background: linear-gradient(to right, transparent, #DDD, transparent); 
+	height: 1px; 
+}
+
+/* ----------------------------------------------------------- */
+
+input[type=email],
+input[type=password],
+input[type=submit],
+input[type=text],
+select,
+button {
+	background: #F5F5F5;
+	border: 0;
+	box-sizing: border-box;	
+	font-family: inherit;
+	margin-bottom: 10px;
+	outline: 0;
+	padding: 10px;
+}
+
+/* ----------------------------------------------------------- */
+
+button { 
+	cursor: pointer; 
+	
+	.hol-btn { 
+		background: @secondary; 
+		color: #EEE; 
+	}
+}
+
+.content { 
+	padding: 10px;
+}
+
+/* ----------------------------------------------------------- */
+.grid {
+	background: transparent;
+	margin: auto;
+	max-width: 1200px;
+	width: 100%;
+
+	&__row {
+
+		&::after {
+			clear: both;
+			content: '';
+			display: table;
+		}
+	}
+}
+
+/* ----------------------------------------------------------- */
+
+.column-one-whole {
+	width: 100%; 
+
+	@media (min-width: @tablet) {
+		width: calc(100%/1);
+	}
+}
+
+.column-one-half { 
+	width: 100%; 
+
+	@media (min-width: @tablet) {
+		width: calc(100%/2);
+	}
+}
+
+.column-one-third {
+	width: 100%; 
+
+	@media (min-width: @tablet) {
+		width: calc(100%/3);
+	}
+}
+
+.column-one-quarter {
+	width: 100%; 
+
+	@media (min-width: @tablet) {
+		width: calc(100%/4);
+	}
+}
+/* ----------------------------------------------------------- */
+
+.hide-on-mobile {
+	display: none;
+	@media (min-width: @tablet) {
+		display: unset;
+	}
+}
+
+.hide-on-tablet {
+	@media (min-width: @tablet) {
+		display: none;
+	}
+}
+
+.hide-on-desktop {
+	@media (min-width: @desktop) {
+		display: none;
+	}
+}
+
+/* ----------------------------------------------------------- */
+
+.fullscreen {
+	background: @secondary;
+	height: 100vh;
+	position: relative;
+
+	&__content {
+		margin: auto;
+		max-width: 400px;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+	}	
+
+	.fs {
+		&-title { 
+			color: @supplementary; 
+			font-family: 'Abril Fatface', cursive; 
+			font-size: 34px; 
+			text-align: center; 
+		}
+		&-message { color: @supplementary; opacity: .3; }
+		&-content { color: @supplementary; text-align: center; }
+	}
+
+	.fs-title { 
+		color: @supplementary;
+	}
+}
+
+/* ----------------------------------------------------------- */

@@ -8,6 +8,8 @@ Ensure you have git installed (of course!), and in your preferred cli terminal, 
 ```
 - git clone https://github.com/sho88/houseoflights-ui.git
 - cd houseoflights-ui
+- yarn (or npm) install
+- yarn build (to build dist file) / or yarn watch to have webpack wait for changes
 - open index.html (for windows users, just type: "index.html")
 ```
 
