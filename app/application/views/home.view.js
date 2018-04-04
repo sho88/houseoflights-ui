@@ -25,7 +25,7 @@ module.exports = HOLUI.MakeView({
   // register the events for this view (in the template) -----------------------
   events() {
   	return [
-	  	{ selector: 'form', ev: 'submit', method: this.onFormSubmission.bind(this) }
+	  	{ selector: 'form', ev: 'submit', method: ($ev) => this.onFormSubmission($ev) }
 	  ];
 	},
 
@@ -33,7 +33,7 @@ module.exports = HOLUI.MakeView({
   onFormSubmission($ev) {
   	$ev.preventDefault();
   	const formElements = $ev.target.elements;
-  	console.log( $ev.target );
+    
   	this.model.setAttribute('username', formElements.namedItem('username').value);
   	this.model.setAttribute('name', formElements.namedItem('name').value);
   	this.model.setAttribute('type', formElements.namedItem('type').value);
