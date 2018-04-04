@@ -3,6 +3,7 @@
 @primary: #450F6C;
 @secondary: #333333;
 @supplementary: #FFFFFF;
+@urgent: #D63031;
 
 @tablet: 768px;
 @desktop: 992px; 
@@ -54,7 +55,16 @@ footer {
 
 hr { 
 	background: linear-gradient(to right, transparent, #DDD, transparent); 
+	border: 0;
 	height: 1px; 
+	margin: 15px 0;
+
+	&.to-left {
+		background: linear-gradient(to right, #DDD, transparent); 
+	}
+	&.to-right {
+		background: linear-gradient(to right, transparent, #DDD); 
+	}
 }
 
 /* ----------------------------------------------------------- */
@@ -93,7 +103,7 @@ button {
 .grid {
 	background: transparent;
 	margin: auto;
-	max-width: 1200px;
+	max-width: 1024px;
 	width: 100%;
 
 	&__row {
@@ -178,14 +188,21 @@ button {
 	}	
 
 	.fs {
+		text-align: center;
+
 		&-title { 
 			color: @supplementary; 
 			font-family: 'Abril Fatface', cursive; 
 			font-size: 34px; 
+		}
+		&-message { 
+			color: @supplementary; 
+			opacity: .3; 
+		}
+		&-content { 
+			color: @supplementary; 
 			text-align: center; 
 		}
-		&-message { color: @supplementary; opacity: .3; }
-		&-content { color: @supplementary; text-align: center; }
 	}
 
 	.fs-title { 
@@ -194,3 +211,25 @@ button {
 }
 
 /* ----------------------------------------------------------- */
+
+.button-grid {
+	&__btn {
+		display: inline-block;
+	}
+	button {
+		border-bottom: 4px solid rgba(0, 0, 0, .2);
+		border-radius: 3px;
+		width: 100%;
+
+		&:hover {
+			border-bottom-width: 2px;
+			position: relative;
+			top: 2px;
+		};
+
+		&.primary { background: @primary; color: @supplementary; }
+		&.secondary { background: @secondary; color: @supplementary; }
+		&.urgent { background: @urgent; color: @supplementary; }
+	}
+}
+
