@@ -29,6 +29,11 @@ module.exports = {
     this._events.emit('model:update');
     return;
   },
+  setAttributes(arr, cb) {
+    arr.forEach(attr => this.data[attr.name] = attr.value)
+    if (typeof cb === 'function') cb();
+    this._events.emit('model:update');
+  },
   getAttributes() {
     return this.data;
   },
