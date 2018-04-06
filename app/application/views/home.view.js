@@ -18,7 +18,7 @@ module.exports = HOLUI.MakeView({
 
   // acts like the constructor 
   initialize() {
-  	this.model.on('model:update', this.render, this);
+  	this.model.on('model:update', () => this.render);
   	this.render();
   },
   
