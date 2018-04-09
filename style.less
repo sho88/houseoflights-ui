@@ -104,6 +104,14 @@ button {
 }
 
 /* ----------------------------------------------------------- */
+
+.text {
+	&-center { text-align: center; }
+	&-left { text-align: left; }
+	&-right { text-align: right; }
+}
+
+/* ----------------------------------------------------------- */
 .grid {
 	background: transparent;
 	margin: auto;
@@ -189,7 +197,7 @@ button {
 		top: 50%;
 		transform: translate(-50%, -50%);
 		width: 100%;
-	}	
+	}
 
 	.fs {
 		text-align: center;
@@ -229,6 +237,7 @@ button {
 		display: inline-block;
 	}
 	button {
+		letter-spacing: 3px;
 		text-transform: uppercase;
 		width: 100%;
 
@@ -238,3 +247,48 @@ button {
 	}
 }
 
+/* ----------------------------------------------------------- */
+
+.hol-modal {
+	background: @primary-transparent;
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	transition: display .5s;
+	width: 100%;
+	
+	&.show {
+		display: block;
+	}
+
+	&__container {
+		background: @supplementary;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+		left: 50%;
+		margin: auto;
+		max-width: 600px;
+		padding: 20px;
+		position: fixed;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
+	}
+}
+
+/* ----------------------------------------------------------- */
+
+.video-embed {
+	height: 0;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	position: relative;
+}
+.video-embed iframe {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}

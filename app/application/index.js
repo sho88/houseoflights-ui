@@ -1,8 +1,8 @@
 'use strict';
 // HouseOfLights UI v0.1 -------------------------------------------------------
 
-// ...create the view ----------------------------------------------------------
+// ...create the view 
 const HomeView = require('./views/home.view');
 
-// ...initialize the app -------------------------------------------------------
+// ...initialize the app
 HomeView.initialize();

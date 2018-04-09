@@ -1,7 +1,7 @@
 const HOLUI = require('./../core');
 
 module.exports = HOLUI.MakeModel({
-  name: 'Sho-Silva',
+  name: 'Sho Carter-Daniel',
   username: 'sho88',
   type: 'Admin',
   typeOptions: [

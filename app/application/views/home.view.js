@@ -26,7 +26,9 @@ module.exports = HOLUI.MakeView({
   events() {
   	return [
       { selector: 'form', ev: 'submit', method: ($ev) => this.onFormSubmission($ev) },
-      { selector: '[name=reset]', ev: 'click', method: () => this.onFormReset() }
+      { selector: '[name=reset]', ev: 'click', method: () => this.onFormReset() },
+      { selector: '.hol-modal__container button, .modal-demo button', ev: 'click', method: () => this.toggleModal() }, //.modal-demo button
+      { selector: '.modal-demo button', ev: 'click', method: () => this.toggleModal() }
 	  ];
 	},
 
@@ -50,5 +52,10 @@ module.exports = HOLUI.MakeView({
     this.model.setAttribute('name', '');
     this.model.setAttribute('type', this.model.getAttribute('typeOptions')[0].value);
     console.log('Form reset...');
+  },
+
+  toggleModal() {
+    const modal = document.querySelector('.hol-modal');
+    modal.classList.toggle('show');
   }
 });
